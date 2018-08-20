@@ -1,0 +1,18 @@
+<templateSet group="Android">
+  <template name="comp" value="@Component(modules = [$MODULES$])&#10;interface $NAME${&#10;$END$&#10;}" description="Dagger Component" toReformat="false" toShortenFQNames="true">
+    <variable name="MODULES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="reca" value="class $NAME$ : RecyclerView.Adapter&lt;$HOLDER$&gt;() {&#10;&#10;    private val $COLLECTION$ = mutableListOf&lt;$TYPE$&gt;()&#10;    &#10;    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int){&#10;    $END$&#10;    }&#10;    &#10;    override fun getItemCount() = $COLLECTION$.size&#10;    &#10;    override fun onBindViewHolder(holder: $HOLDER$, position: Int){&#10;    }&#10;}&#10;    &#10;" description="Recycler view Adapter" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HOLDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COLLECTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+</templateSet>
