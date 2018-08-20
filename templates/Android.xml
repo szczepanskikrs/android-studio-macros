@@ -15,4 +15,18 @@
       <option name="KOTLIN" value="true" />
     </context>
   </template>
+  <template name="mod" value="@Module&#10;abstract class $NAME${&#10;@Binds&#10;$END$&#10;&#10;@Module&#10;@JvmStatic&#10; companion object {&#10;        const val DB_NAME = &quot;QuarrelDB&quot;&#10;    }&#10;}" description="Dagger Module" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="module" value="@Module&#10;abstract class $MODULENAME$ {&#10;    @Binds&#10;    abstract fun $FUNNAME$($END$):$RETURNTYPEBIND$&#10;    &#10;    @Module&#10;    companion object {&#10;        @Provides&#10;        @JvmStatic&#10;        fun $PROVIDESNAME$($END2$):$RETURNTYPE${&#10;        }&#10;    }&#10;}" description="Dagger 2 module" toReformat="false" toShortenFQNames="true">
+    <variable name="MODULENAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FUNNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURNTYPEBIND" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROVIDESNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="END2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURNTYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
 </templateSet>
